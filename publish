@@ -1,0 +1,4 @@
+#!/bin/bash
+
+scp bin/errlog.jar sergeych.net:/home/loggerr/loggerr/shared/system/errlog_java
+rsync -avz doc/ sergeych.net:/home/loggerr/loggerr/shared/system/errlog_java/doc
