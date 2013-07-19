@@ -1,22 +1,5 @@
 /**
  * Interface to the errlog service, see http://errorlog.co
- *
- * The package is fully functional. The uncaught exception handler though is in question, the transport
- * needs to be tested. Nested exceptions are supported.
- *
- * How to use:
- *
- * Be sure to have credentials from http://errorlog.co
- *
- * Call Errlog.initialize as early as possible. You could call it as many times as you want.
- *
- * Call Errlog.d, Errlog.w and Errlog.e to log instead of Log.d, Log.e and Log.w.
- *
- * Use one of Errlog.trace, Errlog.warning and Errlog.error to report to the service. The report will include latest log
- * lines, stack, if Throwable object was specified, and hardare/software/application information.
- *
- * Errlog installs also unhandled exceptions handler.
- *
  * @author real.sergeych@gmail.com
  */
 package co.errlog;
@@ -47,6 +30,27 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.zip.GZIPOutputStream;
 
+/**
+ * Interface to the errlog service, see http://errorlog.co
+ *
+ * The package is fully functional. The uncaught exception handler though is in question, the transport
+ * needs to be tested. Nested exceptions are supported.
+ *
+ * How to use:
+ *
+ * Be sure to have credentials from http://errorlog.co
+ *
+ * Call Errlog.initialize as early as possible. You could call it as many times as you want.
+ *
+ * Call Errlog.d, Errlog.w and Errlog.e to log instead of Log.d, Log.e and Log.w.
+ *
+ * Use one of Errlog.trace, Errlog.warning and Errlog.error to report to the service. The report will include latest log
+ * lines, stack, if Throwable object was specified, and hardare/software/application information.
+ *
+ * Errlog installs also unhandled exceptions handler.
+ *
+ * @author real.sergeych@gmail.com
+ */
 public class Errlog {
 
     static private String accountId, appName;
